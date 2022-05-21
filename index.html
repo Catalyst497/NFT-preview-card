@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* GENERALS */
+    body {
+      background-color: hsl(217, 54%, 11%);
+      font-family: 'Outfit', sans-serif;
+      color: hsl(0, 0%, 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+
+    /* SPECIFICS */
+    .container {
+      position: fixed;
+      background-color:  hsl(216, 50%, 16%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 450px;
+      min-width: 200px;
+      max-width: 250px;
+      padding: 1.3rem;
+      border-radius: 1rem;
+      margin: auto;
+      /* box-shadow: 0 1.5rem 0 1rem hsl(0, 0%, 0%, 0.05); */
+    }
+    .img-eq {
+      position: relative;
+    }
+    .img-eq > *{
+      border-radius: 0.4rem;
+    }
+    [active] {
+      background-color: hsla(178, 100%, 50%, 0.5);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 300ms ease-in;
+    }
+    p {
+      color: hsl(215, 51%, 70%);
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+    .amntntime {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .amnt {
+      color: hsl(178, 100%, 50%);
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+    .time {
+      color: hsl(215, 51%, 70%);
+      font-weight: 300;
+      font-size: 0.8rem;
+    }
+    img[alt="eth"] {
+      margin-bottom: -4px;
+      padding-right: 0.25rem;
+    }
+    img[alt="clock"] {
+      margin-bottom: -4px;
+      padding-right: 0.25rem;
+    }
+    hr {
+      border: none;
+      background-color: hsl(215, 32%, 27%);
+      height: 1px;
+      margin-top: 1.5rem;
+    }
+    .attr {
+      margin-top: 0.2rem;
+      display: flex;
+      align-items: center;
+      height: 2rem;
+    }
+    img[alt="avatar"] {
+      margin-right: 0.8rem;
+    }
+    .attr span.name {
+      color: hsl(0, 0%, 100%);
+      margin-left: 4px;
+    }
+
+    /* ACTIVE TEXT STATE  */
+    span.name:hover, h3:hover {
+      color: cyan;
+      transition: color 300ms ease-in;
+    }
+    [active]:hover {
+      opacity: 1;
+    }
+
+    
+    .attribution { 
+      font-size: 11px; 
+      text-align: center;
+      position: absolute;
+      bottom: 1rem;
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="img-eq">
+      <img src="images/image-equilibrium.jpg" height="100%" width="100%" alt="img-eq">
+      <div active><img src="images/icon-view.svg" alt=""></div>
+    </div>
+    <div>
+      <h3>
+        Equilibrium #3429
+      </h3>
+    </div>
+    <p>
+      Our Equilibrium collection promotes balance and calm.
+    </p>
+    <div class="amntntime">
+      <div class="amnt"><img src="images/icon-ethereum.svg" alt="eth"> 0.041 ETH</div>
+      <div class="time"><img src="images/icon-clock.svg" alt="clock"> 3 days left</div>
+    </div>
+    <hr>
+    <p class="attr">
+      <img src="images/image-avatar.png" height="100%" alt="avatar"> Creation of <span class="name"> Jules Wyvern</span>
+    </p>  
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://vast-falls-30673.herokuapp.com/">Daniel Duyilemi</a>.
+  </div>
+</body>
+</html>
